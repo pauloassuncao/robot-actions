@@ -17,11 +17,14 @@ jobs:
     steps:
     - name: Get code
       uses: actions/checkout@v4
-    - name: Use Node.js 20
+    - name: Use Node.js 24
       uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: 24
     - name: Setup Python
       uses: actions/setup-python@v6.2.0
       with: 
          python-version: 3.12
+    - name: Tests
+      run: node --version
+      run: python --version
